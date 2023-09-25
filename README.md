@@ -32,7 +32,8 @@ Create a file under the same folder ‘.env’ and type-
                           image: redis:${TAG} 
 10.	Type 'docker compose up' or 'docker compose up –d'  in cli  
 11.	SETTING ENVIRONMENT VARIABLE/ATTRIBUTE IN SERVICE CONTAINER
-                        //.env
+
+   	                    //.env
                         TAG= latest
                         //docker-compose.yml
                         services:
@@ -45,8 +46,9 @@ Create a file under the same folder ‘.env’ and type-
                             environment:
                              - MYSQL_ROOT_PASSWORD=root      OR
                              # MYSQL_ROOT_PASSWORD: root
-12.	USE ENVIRONMENT FILE IN SERVICE CONTAINER
-                          //.env
+13.	USE ENVIRONMENT FILE IN SERVICE CONTAINER
+
+   	                      //.env
                           TAG= latest
                           
                           //mysqlconfig.env
@@ -62,8 +64,9 @@ Create a file under the same folder ‘.env’ and type-
                               env_file:
                                 - mysqlconfig.env
 
-13.	SET PROFILE NAME FOR SERVICE //we specify when we want to run a specific image
-                        //.env
+15.	SET PROFILE NAME FOR SERVICE //we specify when we want to run a specific image
+
+   	                    //.env
                         TAG= latest
                         //mysqlconfig.env
                          		MYSQL_ROOT_PASSWORD=root      
@@ -88,7 +91,8 @@ to delete the service with the profile, type ---
 
 14.	TO EXPOSE PORTS 
                     // if you are hitting the port 8000 on your host machine, you are hitting on the port 80 of nginx
-                    //.env
+
+   	               //.env
                     TAG= latest
 
    	                //mysqlconfig.env
@@ -112,7 +116,8 @@ You can type localhost:8000 in your browser and check whether your nginx server 
 
 15.	SET CUSTOM NETWORK AND NETWORK DRIVERS
 
-                //.env
+
+   	            //.env
                 TAG= latest
    	
                 //mysqlconfig.env
@@ -191,6 +196,7 @@ Sometimes we may need to create multiple compose files while working in differen
 Suppose the current compose file is for production. Now I need a separate file for development
 
 Let us create a custom compose file with the name docker-compose.dev.yml
+                      
                       services:
                         web:
                           image: nginx
