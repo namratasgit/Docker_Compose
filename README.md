@@ -211,6 +211,7 @@ Now we run it as---
 'docker compose –f docker-compose.dev.yml up –d'
 and stop and remove it using-
 'docker compose –f docker-compose.dev.yml down --volumes'
+
 18.	USE CUSTOM IMAGE DOCKERFILE WITHIN COMPOSE FILE
 
 i.	Create a new folder ‘docker-compose-1’, open vscode from there and create a dockerfile.
